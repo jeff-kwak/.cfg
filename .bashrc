@@ -11,6 +11,9 @@ export OSH='/home/jeff/.oh-my-bash'
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="powerline"
 
+# If you set OSH_THEME to "random", you can ignore themes you don't like.
+# OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
+
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
 
@@ -40,6 +43,14 @@ OSH_THEME="powerline"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you don't want the repository to be considered dirty
+# if there are untracked files.
+# SCM_GIT_DISABLE_UNTRACKED_DIRTY="true"
+
+# Uncomment the following line if you want to completely ignore the presence
+# of untracked files in the repository.
+# SCM_GIT_IGNORE_UNTRACKED="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.  One of the following values can
@@ -105,6 +116,12 @@ plugins=(
 source "$OSH"/oh-my-bash.sh
 
 # User configuration
+
+export DOTNET_ROOT=$HOME/dotnet
+export DOTNET_HOME=$HOME/dotnet
+
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -132,40 +149,8 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-set -o vi
-
 source ~/.aliases
 source ~/.functions
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# dotnet
-export PATH=$HOME/dotnet:$PATH
-export DOTNET_ROOT=$HOME/dotnet
-export DOTNET_HOME=$HOME/dotnet
+source ~/.git-config
 
 
-export PATH=$PATH:~/.local/bin
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jeff/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jeff/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/jeff/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jeff/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-alias config='/usr/bin/git --git-dir=/home/jeff/.cfg/ --work-tree=/home/jeff'
