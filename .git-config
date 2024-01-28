@@ -1,0 +1,4 @@
+git config --global alias.st status
+git config --global alias.p-all "pull --all --prune"
+git config --global alias.co checkout
+git config --global core.pager "less -FX"
