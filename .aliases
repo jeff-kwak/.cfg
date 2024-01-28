@@ -1,0 +1,10 @@
+alias rrf="rm -r -f"
+alias gl="git log --oneline --graph -10"
+alias gll="git log --oneline --graph -50"
+alias uuid='uuidgen | tee >(tr -d "\n" | pbcopy) | cat'
+alias grr='grep -I -r --exclude-dir=_bak --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=site-packages'
+alias wordle="curl -s https://raw.githubusercontent.com/tabatkins/wordle-list/main/words"
+alias la="ls -l -a"
+alias ll="ls -l"
+alias g=git
+
