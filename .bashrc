@@ -149,8 +149,5 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-source ~/.aliases
-source ~/.functions
-source ~/.git-config
-
+source ~/.env
 

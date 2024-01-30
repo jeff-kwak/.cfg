@@ -7,4 +7,6 @@ alias wordle="curl -s https://raw.githubusercontent.com/tabatkins/wordle-list/ma
 alias la="ls -l -a"
 alias ll="ls -l"
 alias g=git
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
 
