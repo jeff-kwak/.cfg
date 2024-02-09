@@ -24,7 +24,7 @@ function nd() {
 
 function fix-spaces-in-names() {
   for f in ./*; do
-    mv $f $(echo $f | tr '[:upper:]' '[:lower:]' | tr -s '[:blank:]' '-')
+    mv "$f" $(echo "$f" | tr '[:upper:]' '[:lower:]' | tr -s '[:blank:]' '-')
   done
 }
 
