@@ -9,4 +9,6 @@ alias ll="ls -l"
 alias g=git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
+alias dn=dotnet
+alias sense="code ~/sense"
 
