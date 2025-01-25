@@ -12,4 +12,5 @@ config config --local status.showUntrackedFiles no
 alias dn=dotnet
 alias sense="code ~/sense"
 alias g=git
+alias bcat=batcat
 
